@@ -1,0 +1,130 @@
+:root {
+  --color-1: #deb6ff;
+  --color-2: #fae3d9;
+  --color-3: #bbded6;
+  --color-4: #8ac6d1;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #2e15e4, #898b8d);
+  background-size: 558.61px 558.61px;
+  animation: moveBackground 3.5s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  position: relative;
+  background-color: #fff;
+  padding: 2.5em;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--color-1);
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold;
+}
+
+.header [role="img"] {
+  font-size: 3em;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  filter: drop-shadow(1px 2px 1px var(--color-2));
+}
+
+.starter {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.get-fact,
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.result img {
+  border: 1px solid var(--color-2);
+  border-radius: 5px;
+}
+
+.result button {
+  margin-top: 12px;
+}
+
+.main-button {
+  background: #fff;
+  color: var(--color-1);
+  transition: all 0.2s ease-in-out;
+  border: var(--color-1) 1px solid;
+}
+.main-button.invisible {
+  opacity: 0;
+}
+
+.main-button:hover {
+  background: var(--color-1);
+  border: var(--color-1);
+  color: #fff;
+}
+
+.loading {
+  font-size: 2.5em;
+  animation: rotate 2s infinite linear;
+  margin-top: 18px;
+}
+
+.footer {
+  font-size: 12px;
+  margin-top: 12px;
+  position: absolute;
+  bottom: 12px;
+  color: var(--color-1);
+}
+
+.footer a {
+  color: var(--color-4);
+}
+
+.github-logo img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  background: #ffb6b9;
+  border-radius: 100%;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.github-logo img:hover {
+  background: #8ac6d1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
